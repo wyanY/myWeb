@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>综合项目</title>
+
+    <script src="jquery-3.1.0/jquery-3.1.0.min.js"></script>
+    <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap-theme.min.css">
+
+    <style>
+        header{
+            height: 50px;
+            background:linear-gradient(gray,white);
+        }
+        
+        nav{
+            height: 70px;
+            background: linear-gradient(yellow,orange);
+            margin-top: 10px;
+            padding: 15px;
+        }
+
+        section{
+            height: 800px;
+            /*background-color: darkcyan;*/
+            margin-top: 10px;
+        }
+
+        footer{
+            height: 30px;
+            background-color: silver;
+            margin-top: 10px;
+        }
+
+        @keyframes example {
+            from{font-size: 150%}
+            to{
+                font-size: 180%;
+            }
+        }
+
+        h3{
+            color: pink;
+            text-shadow: deeppink 2px 2px 2px;
+            animation: example 1s 100000;
+        }
+
+        #signin{
+            margin-top: 5px;
+        }
+
+        #login{
+            margin-top: 5px;
+        }
+
+        #canvas{
+            /*background: linear-gradient(honeydew,navajowhite);*/
+        }
+    </style>
+    
+</head>
+<body>
+
+<!-- 1、界面安排 -->
+<!-- 2、界面的整体框架 -->
+<!-- 3、补充细节部分 -->
+<!-- 4、canvas小项目 傻鸟 -->
+
+<header class="col-sm-12">
+    <h3 class="col-sm-3">玩,玩个鸟</h3>
+    <button class="col-sm-2 col-sm-push-6 btn btn-default" id="signin" data-toggle="modal" data-target="#loginmodal">注册就送个🐦</button>
+    <button class="col-sm-1 col-sm-push-6 btn btn-primary" id="login">登陆</button>
+</header>
+<nav class="col-sm-12 navbar btn-group">
+    <div class="btn-group ">
+        <button class="btn btn-default" data-toggle="dropdown">益智游戏
+            <span class="caret"></span></button>
+        <ul class="dropdown-menu">
+            <li class="dropdown-header">傻鸟游戏</li>
+            <li>小鸟</li>
+            <li>老鸟</li>
+            <li class="divider"></li>
+            <li>无敌鸟</li>
+        </ul>
+    </div>
+    <div class="btn-group ">
+        <button class="btn btn-default" data-toggle="dropdown">射击游戏
+            <span class="caret"></span></button>
+        <ul class="dropdown-menu">
+            <li class="dropdown-header">打鸟游戏</li>
+            <li>打小鸟</li>
+            <li>打老鸟</li>
+            <li class="divider"></li>
+            <li>打无敌鸟</li>
+        </ul>
+    </div>
+    <div class="btn-group">
+        <button class="btn btn-default" data-toggle="dropdown">RPG
+            <span class="caret"></span></button>
+        <ul class="dropdown-menu">
+            <li class="dropdown-header">扮鸟游戏</li>
+            <li>扮小鸟</li>
+            <li>扮老鸟</li>
+            <li class="divider"></li>
+            <li>扮无敌鸟</li>
+        </ul>
+    </div>
+    <input class="col-sm-3 col-sm-push-1" type="text" placeholder="🔍请输入你想搜索的游戏" style="height: 34px;">
+    <button class="btn btn-info navbar-right">个人中心</button>
+    
+</nav>
+<section class="col-sm-8 col-sm-push-2 " style="padding: 0px">
+    <canvas id="canvas" width="680" height="800"></canvas>
+</section>
+<footer class="col-sm-12 well">
+    <p> 敬请关注作者的微信</p>
+</footer>
+
+<div class="modal" id="loginmodal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="btn btn-default close" data-dismiss="modal">
+                    <span aria-hidden="true">&times;</span>
+                    <span class="sr-only">关闭</span>
+                </button>
+                <h3 class="modal-title">欢迎注册游戏网站</h3>
+            </div>
+            <div class="modal-body">
+                <p>请输入注册的用户名</p>
+                <input type="text" placeholder="请尽量输入好听的用户名" id="username">
+                <p>请输入注册的密码</p>
+                <input type="password" placeholder="随便输" id="pwd">
+                <p id="fansile">请再输入注册的密码</p>
+                <input type="password" placeholder="和上面必须一样" id="checkpwd">
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-success" id="btnsure">确认</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var uname = $("#username");
+    var pwd = $("#pwd");
+    var checkpwd = $("#checkpwd");
+    var btnsure = $("#btnsure");
+
+    var exspan = document.createElement("span");
+    var exmeter = document.createElement("meter");
+    exmeter.max = 10;
+    exmeter.optimum = 9;
+    exmeter.low = 3;
+    exmeter.high = 7;
+
+    checkpwd[0].oninput = function () {
+        if(pwd.val() != this.value && this.value.length != 0)
+        {
+            exspan.innerHTML = "两次输入密码不一致";
+        }else if(this.value.length != 0){
+            exspan.innerHTML = "✅";
+        }
+
+        this.parentNode.appendChild(exspan);
+
+        if(this.value.length == 0){
+            this.parentNode.removeChild(exspan);
+        }
+    };
+
+    btnsure.click(function () {
+
+        if(uname.val().length != 0 && pwd.val().length != 0)
+        {
+            localStorage.setItem("username",uname.val());
+            localStorage.setItem("password",pwd.val());
+
+            $("#loginmodal").modal("hide");
+
+            alert("注册成功");
+        }else {
+            alert("用户名或密码不能为空");
+        }
+    })
+
+    pwd[0].oninput = function () {
+        if(this.value.length < 6 )
+        {
+            exmeter.value = 3;
+        }else if(this.value.length > 6 && this.value.length < 12 )
+        {
+            exmeter.value = 6;
+        }else {
+            exmeter.value = 10;
+        }
+
+        this.parentNode.insertBefore(exmeter,document.getElementById("fansile"));
+        if(this.value.length == 0){
+            this.parentNode.removeChild(exmeter);
+        }
+    }
+
+</script>
+
+<script>
+    //画布的大小
+//    var cwidth = $("#canvas")[0].style.width;
+//    console.log(cwidth);
+//    var cheight = $("#canvas")[0].style.height;
+//    console.log(cheight);
+//
+//    var oc = document.getElementById("canvas");
+//    console.log(oc.width);
+    var canvas = document.getElementById("canvas");
+    var context = canvas.getContext("2d");
+
+    var cwidth = 680;
+    var cheight = 800;
+    var pipeSpace = 200;
+    var gravity = 10;
+    var tid;
+    var index = 0;
+
+//    1、创建界面对象
+//    2、设计游戏规则
+//    3、启动游戏
+
+//    背景对象
+//    bg()
+//    {
+//        坐标
+//        图片
+//
+//        绘制方法
+//    }
+    function Background(x,y,w,h,src) {
+        this.x = x;
+        this.y = y;
+        this.w = w;
+        this.h = h;
+
+        var img = new Image();
+        img.src = src;
+        this.image = img;
+
+        this.draw = drawBackground;
+    }
+    
+    function drawBackground() {
+        context.drawImage(this.image,this.x,this.y,this.w,this.h);
+    }
+
+//  鸟是有三种状态的
+    function Bird(x,y,w,h,images) {
+        this.x = x;
+        this.y = y;
+        this.w = w;
+        this.h = h;
+
+        this.images = images;
+        
+        this.draw = drawBird;
+    }
+    function drawBird() {
+        index++;
+        if(index > 2)
+        {
+            index = 0;
+        }
+        var img = new Image();
+        img.src = this.images[index];
+
+        context.drawImage(img,this.x,this.y,this.w,this.h);
+    }
+
+    function UpPipe(x,y,w,h,src) {
+        this.x = x;
+        this.y = y;
+        this.w = w;
+        this.h = h;
+
+        var img = new Image();
+        img.src = src;
+        this.image = img;
+
+        this.draw = drawUpPipe;
+    }
+
+    function drawUpPipe() {
+        context.drawImage(this.image,140,500,150,800,this.x,this.y,this.w,this.h);
+    }
+
+    function DownPipe(x,y,w,h,src) {
+        this.x = x;
+        this.y = y;
+        this.w = w;
+        this.h = h;
+
+        var img = new Image();
+        img.src = src;
+        this.image = img;
+
+        this.draw = drawDownPipe;
+    }
+
+    function drawDownPipe() {
+        context.drawImage(this.image,0,500,150,800,this.x,this.y,this.w,this.h);
+    }
+
+    var bg = new Background(0,0,cwidth,cheight-200,"images/bg.png");
+    var ground = new Background(0,cheight-200,cwidth,200,"images/ground.png");
+    var bird = new Bird(100,400,41,31,["images/0.gif","images/1.gif","images/2.gif"]);
+    var uppipe = new UpPipe(cwidth-100,0,100,300,"images/pipe.png");
+    var downPipe = new DownPipe(cwidth-100,500,100,110,"images/pipe.png");
+
+    //  因为canvas创建的对象需要绘制才能出现在界面上
+    tid = setInterval(drawAll,100);
+
+    function drawAll() {
+        context.clearRect(0,0,cwidth,cheight);
+
+        bg.draw();
+        ground.draw();
+        bird.draw();
+        uppipe.draw();
+        downPipe.draw();
+        cal();
+    }
+
+//  1、首先要让鸟从上往下掉 2、水管从右往左出现 3、按下空格键鸟上升
+//  游戏规则 鸟触碰水管 地面 就死亡 游戏结束 计算分数 显示
+//  提升 记录每次游戏的分数 存到localstorage 当中
+
+    function cal() {
+        bird.y += 10;//如果你要加大难度 速率变快点
+
+//      最好把水管速率做成一个独立的部分
+        uppipe.x -= 8;
+        downPipe.x -= 8;
+        console.log(uppipe.x);
+
+        if((uppipe.x + uppipe.w) < 0)
+        {
+            uppipe.x = cwidth - 100;
+            downPipe.x = cwidth - 100;
+        }
+
+//        random 保证水管最低有100的高度 水管之间是200的距离
+
+        if(bird.y >= ground.y)
+        {
+            clearInterval(tid);
+            
+//            游戏结束
+            context.fillText("你得了最高分",200,100);
+            context.font = "Wawati SC";
+            context.fontSize = "50px";
+            context.fillStyle = white;
+            context.fill();
+        }
+    }
+
+//  让鸟上升的部分
+    document.onkeypress = function (e) {
+        var evt = e || window.event;
+        if(e.keyCode == 32)
+        {
+            bird.y -= 50;
+        }
+    };
+
+    document.onclick = function () {
+        bird.y = 100;
+        tid = setInterval(drawAll,100);
+    }
+//            console.log(uppipe.x);
+</script>
+
+</body>
+</html>

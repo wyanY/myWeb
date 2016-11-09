@@ -1,0 +1,40 @@
+/* 公共样式*/
+h1,h2,h3,h4,h5,h6{
+    font-weight:normal;
+}
+*{
+    margin:0;
+    padding:0;
+}
+
+/** 设置默认字体 **/
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+}
+/* 将斜体扶正 */
+address, cite, dfn, em, var {
+    font-style: normal;
+}
+/* 统一等宽字体 */
+code, kbd, pre, samp {
+    font-family: courier new, courier, monospace;
+}
+/* 小于 12px 的中文很难阅读，让 small 正常化 */
+small {
+    font-size: 12px;
+}
+
+/** 重置列表元素 **/
+ol,ul,li {
+    list-style:none;
+}
+
+/** 重置文本格式元素 **/
+a {
+    text-decoration: none; outline:none
+}
+
+/* img 搭车：让链接里的 img 无边框*/
+fieldset, img {
+    border: 0;
+}

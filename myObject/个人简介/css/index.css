@@ -1,0 +1,273 @@
+.banner{
+    position:absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+}
+/* 头部banner */
+body{
+    height:100%;
+    font-family:"微软雅黑";
+    margin:0;
+    padding:0;
+    z-index:5;
+}
+html{
+    height:100%;
+    width:100%;
+}
+.preloader{
+    position:fixed;
+    width:100%;
+    height:100%;
+    background:#fff;
+    z-index:9999;
+}
+.preloader .item{
+    width:100px;
+    height:100px;
+    position:absolute;
+    top:50%;
+    left:50%;
+    margin-left:-50px;
+    margin-top:-50px;
+}
+.flickerplate .opacity{
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.4); /* Standard Off */
+}
+.flickerplate .content{
+    z-index:5;
+    position:relative;
+    margin:0 auto;
+    height:100%;
+}
+.flickerplate .content{
+    width:100%;
+    height:100%;
+    position:absolute;
+    left:0;
+    top:0;
+}
+.flickerplate .content .text{
+    position:absolute;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    margin:auto;
+    height:520px;
+    text-align:center;
+}
+.flickerplate .text .logo{
+    width:132px;
+    height:132px;
+    margin:0 auto;
+}
+.flickerplate .content .txt{
+    font-size:5.65rem;
+    color:#fff;
+    font-weight:100;
+    font-family:"宋体";
+    line-height:90px;
+    margin:40px 0;
+    display:block;
+}
+.flickerplate .content .txt_en{
+    font-size:5.65rem;
+    color:#fff;
+    font-weight:600;
+    letter-spacing:10px;
+}
+.flickerplate hr{
+    display:block;
+    border:0;
+    width:160px;
+    margin:0 auto;
+    background:#fff;
+    height:1px;
+}
+.flickerplate .content p{
+    font-size:1rem;
+    color:#fff;
+    line-height:56px;
+    font-weight:100;
+}
+.flickerplate .arrow-down{
+    font-family:"iconfont";
+    position:absolute;
+    left:50%;
+    z-index:99;
+    margin-left:-22px;
+    bottom:120px;
+    font-size:2.8rem;
+    width:20px;
+    height:29px;
+    animation:bounce-fade 1.2s infinite;
+}
+.flickerplate .arrow-down a{
+    color:#fff;
+}
+.navbar{
+    background-color: black;
+    top: 72px;
+    z-index: 100;
+}
+.current{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+/* about */
+.about{
+    width:100%; position:relative; z-index:10; overflow:hidden; padding-bottom:50px; background:#fff; padding-top:120px;}
+.about h2{letter-spacing:5px; font-size:48px; font-weight:500; color:#353535; text-align:center; line-height:88px;}
+
+.about h3{ line-height:1; margin-top:0; font-size:24px; font-weight:100; color:#424242; letter-spacing:5px; text-align:center; line-height:40px;}
+.about .line{ width:45px; background:#424242; height:2px; margin:30px auto 45px; display:block;}
+.about p{ cursor:pointer; color:#242424; letter-spacing:3px; line-height:20px; text-align:center; font-size:14px;}
+.about .jianli{display:block; width:200px; height:45px; border:1px solid #424242; margin:90px auto; line-height:45px; color:#171717; font-size:16px; text-align:center;-webkit-transition: all 0.3s ease-in; -moz-transition: all 0.3s ease-in;-ms-transition: all 0.3s ease-in;-o-transition: all 0.3s ease-in;transition: all 0.3s ease-in; }
+.about .jianli:hover{ background:#424242; text-decoration:none; color:#fff;border-radius:50px;}
+@media screen and (min-width:968px) {
+    .about .skill{ max-width:968px; margin:0 auto;}
+    .about .skill li{float:left; width:191px;}
+}
+@media screen and (max-width:968px) {
+    .about .skill{ max-width:600px; margin:0 auto;}
+    .about .skill li{float:left; width:150px;}
+}
+@media screen and (max-width:620px) {
+    .about .skill{ max-width:400px; margin:0 auto;}
+    .about .skill li{float:left; width:200px;}
+}
+@media screen and (max-width:480px) {
+    .about .skill{ max-width:191px; margin:0 auto;}
+    .about .skill li{float:left; width:191px;}
+}
+
+.about .skill{
+    margin-top: 30px;
+}
+/*.about .skill li{
+    margin: 0 60px;
+}*/
+.about .skill li .con{
+    margin: 10px auto;
+    width:102px; height:102px;
+    overflow:hidden;
+    position:relative;
+    border:1px solid #fff;
+    border-radius:50%;
+    -webkit-transition: all 0.3s ease-in;
+    -moz-transition: all 0.5s ease-in;
+    -ms-transition: all 0.5s ease-in;
+    -o-transition: all 0.5s ease-in;
+    transition: all 0.5s ease-in;
+}
+.about .skill li .con .box{
+    position:relative;
+    border:1px dashed #424242;
+    width:100px; height:100px;
+    border-radius:50px;
+    -webkit-border-radius:50px;
+    -moz-border-radius:50px;
+    -ms-border-radius:50px;
+    -o-border-radius:50px;
+    margin:0 auto;
+    -webkit-transition: all 0.3s ease-in;
+    -moz-transition: all 0.3s ease-in;
+    -ms-transition: all 0.3s ease-in;
+    -o-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
+}
+.about .skill li .con .box .yuan{ width:46px; height:46px; background:#424242;text-align:center; border-radius:50%; margin:0 auto; position:absolute; top:50%; left:50%; margin-left:-23px; margin-top:-23px;}
+.about .skill li .con:hover{border:2px solid #4d4d4d;}
+.about .skill li .con:hover .box{ background:#555555;  width:82px; height:82px; margin:9px auto;}
+
+.about .skill li .con .yuan a{
+    position:absolute;
+    left:50%;top:50%;
+    margin:-15px 0 0 -10px;
+    font-family:"iconfont";
+    color:#fff;
+    -webkit-transition: all 0.3s ease-in;
+    -moz-transition: all 0.3s ease-in;
+    -ms-transition: all 0.3s ease-in;
+    -o-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
+    position: fixed;
+}
+.about .skill li .con .yuan .bb{ font-size:14px; font-family:"微软雅黑"; position:absolute; left:50%;top:50%;
+    margin:-9px 0 0 -15px;
+    opacity:0;}
+.about .skill li .con .yuan .aa{position:absolute; left:50%;top:50%;
+    font-size:20px;
+}
+.about .skill li .con .yuan a:hover{ text-decoration:none;}
+.about .skill li .con:hover .aa{opacity:0;}
+.about .skill li .con:hover .bb{ opacity:1; color:#ccc; font-family:"微软雅黑";  font-weight:100; font-size:14px;}
+.about .skill li span{ color:#171717; text-align:center; display:block; font-size:14px; line-height:28px;}
+
+/* works */
+.works{ width:100%; position:relative; z-index:10;background:#fff ;padding-bottom:50px; padding-top:120px; overflow:hidden;}
+.works h2{letter-spacing:5px; font-size:48px; font-weight:500; color:#353535; text-align:center; line-height:48px; height:48px; }
+.works h3{ line-height:88px; font-size:24px; font-weight:100; color:#424242; letter-spacing:5px; text-align:center;}
+.works .line{ width:45px; background:#424242; height:2px; margin:0 auto 30px; display:block;}
+.works .txt{ cursor:pointer; color:#242424; letter-spacing:3px; line-height:28px; text-align:center; font-size:14px;}
+.works ul{ overflow:hidden;
+    margin:104px auto;
+    }
+.works ul li{ overflow:hidden;}
+
+@media screen and ( min-width:900px){
+    .works ul li{ width:16.6%; height: auto; float:left;}
+}
+@media screen and ( max-width:900px){
+    .works ul li{ width:25%; height: auto; float:left;}
+}
+@media screen and ( max-width:700px){
+    .works ul li{ width:33.3%; height: auto; float:left;}
+}
+@media screen and ( max-width:450px){
+    .works ul li{ width:50%; height: auto; float:left;}
+}
+.works ul li a{ display:block; width:100%; height:100%; position:relative;}
+.works ul li img{ width:100%; display:block; transition: 1.1s transform; transform: translateZ(0); }
+.works ul li .text{width:0; height:0; background:#424242; z-index:99; position:absolute; top:50%;left:50%;border-radius: 50%; transition:all .3s ease-in; opacity:0;}
+.works ul li .text p{ color:#fff; font-size:16px;}
+.works ul li:hover .text{position:absolute; top:-50%;left:-50%; z-index: 99; width:200%;height: 200%; border-radius: 50%; background:#454545; opacity:0.8; color:#fff; text-align:center; }
+.works ul li .text p{display:inline-block; text-align:center;  width:100%; font-size:15px; font-weight:100; line-height: 2px; margin-top:50%; opacity:1;}
+.works ul li:hover img{ transform:scale(1.5, 1.5); transition: .2s ease-in-out transform;}
+.works .more{ overflow:hidden;display:block; width:200px; height:45px; border:1px solid #424242; margin:70px auto; line-height:45px; color:#171717; font-size:16px; text-align:center;-webkit-transition: all 0.3s ease-in; -moz-transition: all 0.3s ease-in;-ms-transition: all 0.3s ease-in;-o-transition: all 0.3s ease-in;transition: all 0.3s ease-in; }
+
+.works .more:hover{ background:#424242; text-decoration:none; color:#fff;border-radius:50px;}
+
+
+/* 联系我 */
+.contact{ width:100%; position:relative; z-index:10; overflow:hidden; background:#fff; padding-bottom:80px;}
+.contact h2{letter-spacing:5px; font-size:48px; font-weight:500; color:#353535; text-align:center; line-height:48px; height:48px; margin:0;  margin-top:120px;}
+
+.contact h3{ line-height:88px; font-size:24px; font-weight:100; color:#424242; letter-spacing:5px; text-align:center;}
+.contact .line{ width:45px; background:#424242; height:2px; margin:0px auto 30px; display:block;}
+.contact .txt{ cursor:pointer; color:#242424; letter-spacing:3px; line-height:28px; text-align:center; font-size:14px;}
+
+
+@media screen and ( min-width:480px){
+    .contact .lxwo{ width:425px; margin:80px auto;}
+    .contact .lxwo .left{ float:left; width:169px; height:169px;}
+    .contact .lxwo .right{ float:left; margin-left:80px;}
+}
+@media screen and ( max-width:480px){
+    .contact .lxwo .left{ width:169px; height:169px; margin:20px auto;}
+    .contact .lxwo .right{ text-align:center; margin-top:20px;}
+}
+.contact .lxwo .right span{ display:block; color:#161616; font-size:16px; height:60px; letter-spacing:1px;}
+
+/*案例 开始*/
+.works{padding:20px 0;}
+.works .case_title{letter-spacing:5px; font-size:48px; font-weight:500; color:#353535; text-align:center; line-height:48px; height:48px; }
+.works .case_title2{ line-height:88px; font-size:24px; font-weight:100; color:#424242; letter-spacing:5px; text-align:center;}

@@ -1,0 +1,294 @@
+body{
+    background-color: #fff;
+    font-family: "Microsoft YaHei", 'Hiragino Sans GB', '\5b8b\4f53', sans-serif;;
+
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+header .nav li{
+    list-style: none;
+    float: left;
+}
+.nav li a{
+    text-decoration: none;
+    color: #999;
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+header{
+    background-color: #f2f2f2;
+}
+header .w{
+    width: 1230px;
+    margin: 0 auto;
+}
+header .nav{
+    width: 1230px;
+    height: 32px;
+    font-size: 12px;
+    color: #999;
+    line-height: 32px;
+    position: relative;
+}
+header .nav .left{
+    float: left;
+    width: 218px;
+}
+header .nav .left li{
+    margin-right: 18px;
+}
+
+header .nav .right{
+    width: 692px;
+    height: 32px;
+}
+
+header .nav .right li{
+    /*margin-right: 18px;*/
+    padding: 0 9px 0 9px;
+    position: relative;
+}
+header .nav .right li .icon-aixin{
+    padding-left: 15px;
+    background: url(../images/xin.png) no-repeat -3px 6px;
+}
+header .nav .right li .icon-gwc{
+    padding-left: 15px;
+    background: url(../images/gouwuche.png) no-repeat -4px 5px;
+}
+header .nav .right li .icon-phone{
+    padding-left: 15px;
+    background: url(../images/phone.png) no-repeat -1px 5px;
+}
+header .nav .right li .icon-line{
+     padding-left: 15px;
+     background: url(../images/nav.png) no-repeat -2px 8px;
+ }
+header .nav .right li .icon-jt{
+    padding-right: 10px;
+    background: url(../images/jiantou.png) no-repeat right center;
+}
+.nav ul li a:hover{
+    color: red;
+}
+
+
+
+/*隐藏盒子的设置*/
+.hide a{
+    color: #999;
+    font-size: 12px;
+}
+.hide a:hover{
+    color: red;
+}
+
+/*我的淘宝的样式设置*/
+.Wdtb{
+    display: none;
+    width: 76px;
+    position: absolute;
+    top: 32px;
+    left: -1px;
+    border: solid #eeeeee;
+    border-width: 0 1px 1px;
+    padding: 6px 10px;
+    line-height: 20px;
+    background-color: #fff;
+
+}
+
+
+/*收藏夹的样式设置*/
+.Scjia{
+    display: none;
+    width: 60px;
+    position: absolute;
+    top: 32px;
+    left: -1px;
+    border: solid #eeeeee;
+    border-width: 0 1px 1px;
+    padding: 6px 10px;
+    line-height: 20px;
+    background-color: #fff;
+}
+
+/*手机版的样式设置*/
+.ewma{
+    display: none;
+    position: absolute;
+    top: 29px;
+    left: -46px;
+    width: 175px;
+    height: 228px;
+    border: solid #eeeeee;
+    border-width: 0 1px 1px 1px;
+    z-index: 100;
+    /*background: url(../images/sjewma.jpg) no-repeat;*/
+    /*background-color: #fff;*/
+}
+.ewma img{
+    width: 175px;
+    height: 228px;
+}
+
+/*商家支持的样式设置*/
+.seller{
+    display: none;
+    position: absolute;
+    top: 32px;
+    left: -67px;
+    width: 122px;
+    height: 159px;
+    padding: 10px;
+    background-color: #fff;
+    z-index: 100;
+    border: solid #eeeeee;
+    border-width: 0 1px 1px;
+    color: #666;
+    font-size: 12px;
+}
+.seller .first{
+    width: 112px;
+    height: 105px;
+    border-bottom: 1px dashed #666;
+}
+.seller .last{
+    width: 112px;
+    height: 46px;
+    margin-top: 6px;
+    border-bottom: 1px dashed #666;
+}
+.seller dl dt{
+    font-weight: 700;
+    width: 122px;
+    height: 20px;
+    line-height: 20px;
+}
+.seller dl dd{
+    float: left;
+    width: 56px;
+    height: 20px;
+    line-height: 20px;
+}
+
+
+
+
+/* 网站导航的样式设置*/
+.navigation{
+    display: none;
+    position: absolute;
+    top: 32px;
+    left: -1118px;
+    width: 1198px;
+    height: 200px;
+    border: solid #eeeeee;
+    border-width: 0 1px 1px 1px;
+    background-color: #ffffff;
+    z-index: 100;
+    padding-top: 25px;
+}
+.navigation .hot{
+    width: 275px;
+    height: 200px;
+    padding-left: 30px;
+    /*background-color: peachpuff;*/
+}
+.navigation .hot h2{
+    width: 275px;
+    height: 22px;
+    padding-bottom: 8px;
+    color: #f56a00;
+    font-size: 16px;
+    font-weight: 700;
+}
+.navigation .hot ul li{
+    float: left;
+    width: 90px;
+    height: 16px;
+    padding: 6px 0;
+    font-size: 12px;
+}
+
+.navigation .market{
+    width: 375px;
+    height: 200px;
+    border:  solid #eeeeee;
+    border-width: 0 1px;
+    padding-left: 30px;
+}
+.navigation .market h2{
+    width: 375px;
+    height: 22px;
+    padding-bottom: 8px;
+    color: #2263d4;
+    font-size: 16px;
+    font-weight: 700;
+}
+.navigation .market ul li{
+    float: left;
+    width: 90px;
+    height: 16px;
+    padding: 6px 0;
+    font-size: 12px;
+}
+
+.navigation .brand{
+    width: 270px;
+    height: 200px;
+    border:  solid #eeeeee;
+    border-width: 0 1px 0 0;
+    padding-left: 30px;
+}
+.navigation .brand h2{
+    width: 270px;
+    height: 22px;
+    padding-bottom: 8px;
+    color: deeppink;
+    font-size: 16px;
+    font-weight: 700;
+}
+.navigation .brand ul li{
+    float: left;
+    width: 90px;
+    height: 16px;
+    padding: 6px 0;
+    font-size: 12px;
+}
+.navigation .help{
+    width: 155px;
+    height: 200px;
+    border-width:  0 1px 0 0;
+    padding-left: 30px;
+}
+.navigation .help h2{
+    width: 155px;
+    height: 22px;
+    padding-bottom: 8px;
+    color: #666;
+    font-size: 16px;
+    font-weight: 700;
+}
+.navigation .help ul li{
+    float: left;
+    width: 95px;
+    height: 16px;
+    padding: 6px 0;
+    font-size: 12px;
+}
+.navigation ul li{
+    color: #666;
+}
+.navigation li.img-h{
+    background: url(../images/h.png) no-repeat 48px -1px;
+}
+.navigation li.img-n{
+    background: url(../images/n.png) no-repeat 48px -1px;
+}

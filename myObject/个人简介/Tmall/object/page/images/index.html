@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="cat.css"/>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            text-decoration: none;
+        }
+        body{
+            background-color: #ffffff;
+        }
+        .header{
+
+            width: 1190px;
+            height: 92px;
+            margin: 0 auto;
+
+        }
+        .header h1{
+            float: left;
+            width: 380px;
+            height: 72px;
+            padding: 20px 0 0 20px;
+        }
+        .header h1 span{
+            float: left;
+            width: 83px;
+            height: 46px;
+        }
+        .header h1 span img{
+            float: left;
+            width: 83px;
+            height: 46px;
+        }
+        .header .header_extra{
+            float: right;
+            width: 790px;
+            height: 61px;
+            padding-top: 25px;
+        }
+        .header .header_extra .sousu{
+            width: 540px;
+            height: 36px;
+            float: right;
+            background-color: #fff;
+        }
+        .header .header_extra .sousu .text{
+            width: 460px;
+            height: 36px;
+            float: left;
+            outline: none;
+            padding-left: 5px;
+            border: 2px solid darkred;
+        }
+        .header .header_extra .sousu .bt{
+            width: 71px;
+            height: 40px;
+            float: right;
+            background-color: darkred;
+             border:none;
+            color: white;
+            font-size: 20px;
+        }
+        /*头部样式设置结束*/
+
+        /*内容样式设置开始*/
+        /*内容样式上部开始*/
+        ul{
+            list-style: none;
+        }
+        #content{
+            margin: 0 auto;
+            width: 1190px;
+            background-color: #eee;
+        }
+        #content .content_up{
+            margin-top: 10px;
+            width: 1190px;
+            height: 402px;
+
+        }
+        #content .content_up .up li{
+            float: left;
+            width: 383px;
+            height: 383px;
+
+            margin-left: 20px;
+        }
+        #content .content_up li.first{
+            margin: 0;
+        }
+        #content .content_up img{
+            width: 383px;
+            height: 383px;
+        }
+
+        #content .content_down{
+
+            width: 1190px;
+            height: 219px;
+
+        }
+        #content .content_down  li{
+            float: left;
+            width: 383px;
+            height: 200px;
+
+            margin-left: 20px;
+        }
+        #content .content_down li.first{
+            margin: 0;
+        }
+        #content .content_down img{
+            width: 383px;
+            height: 200px;
+        }
+        /*内容样式上部结束*/
+
+        /*中间分隔线开始*/
+        #content .content_title{
+            width: 1190px;
+            height: 109px;
+
+        }
+        #content .content_title .newtitle{
+              width: 1190px;
+              height: 64px;
+
+          }
+        #content .content_title .newtitle div{
+            margin: 0 auto;
+            width: 307px;
+            height: 45px;
+            border-bottom: 2px solid black ;
+
+        }
+        #content .content_title .newtitle img{
+
+            width: 307px;
+            height: 33px;
+
+        }
+        #content .content_title .sale{
+            width: 1190px;
+            height: 36px;
+            text-align: center;
+            line-height: 36px;
+            font-size: 20px;
+        }
+        /*中间分割线结束*/
+        #content .content_bottom{
+            /*margin-top: 10px;*/
+            width: 1190px;
+            height: 289px;
+        }
+        #content .content_bottom .bottom{
+            float: left;
+            width: 232px;
+            height: 259px;
+            margin: 0px 0 10px 7px;
+        }
+        #content .content_bottom .first{
+            margin-left: 0;
+        }
+        #content .content_bottom .bottom .show{
+            float: left;
+            width: 232px;
+            height: 232px;
+
+        }
+        #content .content_bottom .bottom .bot_tom{
+            padding: 0px 0 0 10px;
+            float: left;
+            width: 222px;
+            height: 37px;
+            background-color: white;
+
+        }
+        #content .content_bottom .bottom .bot_tom img{
+            float: left;
+            width: 76px;
+            height: 37px;
+        }
+        #content .content_bottom .bottom .bot_tom span{
+            float: right;
+            width: 80px;
+            height: 37px;
+            text-align: center;
+            line-height: 37px;
+            font-size: 20px;
+        }
+
+        .sidebr{
+            width: 35px;
+            height: 626px;
+            background-color: #000000;
+            position: fixed;
+            top: -1px;
+            right: 0px;
+        }
+        .sidebr  li{
+            width: 35px;
+            height: 35px;
+        }
+        .sidebr img {
+            width: 35px;
+            height: 35px;
+        }
+        .sidebr li.second {
+            /*padding-left: 4px;*/
+            width: 35px;
+            height: 90px;
+            border-top: 1px solid gray;: ;
+            border-bottom: 1px solid gray;: ;
+        }
+        .sidebr li.second img{
+            /*padding-left: 4px;*/
+            width: 35px;
+            height: 90px;
+            border-top: 1px solid gray;: ;
+            border-bottom: 1px solid gray;: ;
+        }
+        .hide{
+            width: 90px;
+            height: 35px;
+            position: absolute;
+            top: 70px;
+            /*right: 31px;*/
+            display: none;
+            right: 100px;
+        }
+        .wenzi{
+            float: left;
+            width: 80px;
+            height: 35px;
+            text-align: center;
+            line-height: 35px;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .sjx{
+            float: right;
+            width: 0px;
+            height: 0px;
+            border: 4px solid rgba(256,256,256,0.1);
+            border-left: 6px solid rgba(0,0,0,0.5);
+            /*border-right: 2px solid red;*/
+            position: absolute;
+            top: 14px;
+            right: 0;
+        }
+        .hide1{
+            width: 90px;
+            height: 35px;
+            position: absolute;
+            top: 195px;
+            /*right: 31px;*/
+            display: none;
+            right: 100px;
+        }
+        .hide2{
+            width: 90px;
+            height: 35px;
+            position: absolute;
+            top: 230px;
+            right: 100px;
+            display: none;
+        }
+        .hide3{
+            width: 90px;
+            height: 35px;
+            position: absolute;
+            top: 265px;
+            /*right: 31px;*/
+            display: none;
+            right: 100px;
+        }
+        .hide4{
+            width: 90px;
+            height: 35px;
+            position: absolute;
+            top: 300px;
+            /*right: 31px;*/
+            right: 100px;
+            display: none;
+        }
+        .hide5{
+            width: 90px;
+            height: 35px;
+            position: absolute;
+            top: 335px;
+            /*right: 31px;*/
+            display: none;
+            right: 100px;;
+        }
+        .hide6{
+            width: 90px;
+            height: 35px;
+            position: absolute;
+            top: 475px;
+            /*right在写js的时候还是要等于31px*/
+            /*right: 31px;*/
+            right: 100px;
+            display: none;
+        }
+
+        .hide7{
+            width: 90px;
+            height: 35px;
+            position: absolute;
+            top: 510px;
+            /*right在写js的时候还是要等于31px*/
+            /*right: 31px;*/
+            right: 100px;
+            display: none;
+        }
+        .hide8{
+            width: 90px;
+            height: 35px;
+            position: absolute;
+            top: 545px;
+            /*right在写js的时候还是要等于31px*/
+            /*right: 31px;*/
+            right: 100px;
+            display: none;
+        }
+    </style>
+    <script>
+        window.onload = function(){
+            var content = document.getElementById('content');
+//            console.log(content);
+//            console.log(content.childNodes);
+           var  lis1 = content.childNodes[1].getElementsByTagName('li');
+            var lis2 = content.childNodes[3].getElementsByTagName('li');
+            var divs = document.getElementsByClassName('bottom');
+//            console.log(divs);
+//写一个函数  把所想实现的效果写进去 然后调用
+            function shaDow(id){
+                for(var i = 0; i < id.length; i++){
+                    id[i].index = i;
+//                    console.log(id[i].index);
+                    id[i].onmouseover = function(){
+//                        这个循环实现的是清楚作用
+                        for(var i = 0; i < id.length; i++){
+                            id[i].style.boxShadow = '0 0 0';
+                        }
+                        id[this.index].style.boxShadow = "0px 0px 2px 2px  #888";
+
+                    }
+
+
+                }
+            }
+            shaDow(lis1);
+            shaDow(lis2);
+            shaDow(divs);
+
+
+//固定侧边栏
+            var img = new Image();
+            img = ["tamll-master/imgs/ac1.png","tamll-master/imgs/ac2.png","tamll-master/imgs/ac3.png",'tamll-master/imgs/ac4.png','tamll-master/imgs/ac5.png','tamll-master/imgs/ac6.png','tamll-master/imgs/ac7.png', 'tamll-master/imgs/ac8.png','tamll-master/imgs/ac9.png','tamll-master/imgs/ac10.png'];
+            var num = ["tamll-master/imgs/特权.png","tamll-master/imgs/yougouwuche.png","tamll-master/imgs/钱.png", "tamll-master/imgs/心.png","tamll-master/imgs/星.png","tamll-master/imgs/表.png","tamll-master/imgs/充.png","tamll-master/imgs/反馈.png","tamll-master/imgs/大礼包.png","tamll-master/imgs/回顶部.png"];
+            var sidebar = document.getElementById('sidebar');
+            var box = document.getElementById('box');
+            var imgs = sidebar.getElementsByTagName('img');
+            var show = box.getElementsByTagName('div');
+            console.log(imgs);
+            console.log(show);
+            for(var i = 0; i < imgs.length; i++ ){
+                imgs[i].index = i;
+                imgs[i].onmouseover = function(){
+//                     清空
+                    for(var i = 0; i < show.length; i++){
+                        show[i].style.display = 'none';
+                        show[i].style.right = '100px';
+                    }
+                    imgs[this.index].setAttribute('src',img[this.index]);
+                    show[this.index].style.display = 'block';
+                    show[this.index].style.right = '25px';
+
+                }
+                imgs[i].onmouseout = function(){
+                    show[this.index].style.display = 'none';
+                    show[this.index].style.right = '100px';
+                    imgs[this.index].setAttribute('src',num[this.index]);
+
+
+                }
+            }
+
+
+            }
+
+
+    </script>
+</head>
+<body>
+<!--头部开始-->
+<div class="header">
+    <h1>
+        <span>
+        <a href="//www.tmall.com" title="天猫Tmall.com"><img src="title.png" alt=""/></a>
+        </span>
+
+    </h1>
+    <div class="header_extra">
+        <div class="sousu">
+            <form action="">
+                <input type="text" placeholder="气质短靴 精巧华丽" class="text"/>
+                <input type="button" class="bt" value="搜索"/>
+            </form>
+        </div>
+    </div>
+</div>
+<!--头部结束-->
+
+<!--内容图画开始-->
+<div id="content">
+    <div class="content_up">
+        <ul class="up">
+            <li class="first"><a href="#"><img src="1.jpg" alt=""/></a></li>
+            <li><a href="#"><img src="2.jpg" alt=""/></a></li>
+            <li><a href="#"><img src="3.jpg" alt=""/></a></li>
+        </ul>
+    </div>
+    <div class="content_down">
+        <ul class="down">
+            <li class="first"><a href="#"><img src="4.png" alt=""/></a></li>
+            <li><a href="#"><img src="5.png" alt=""/></a></li>
+            <li><a href="#"><img src="6.png" alt=""/></a></li>
+        </ul>
+    </div>
+    <!-- 中间分割线-->
+    <div class="content_title">
+        <div class="newtitle">
+           <div><a href="#"><img src="7.png" alt=""/></a></div>
+        </div>
+        <div class="sale">新品驾到</div>
+    </div>
+    <!-- 中间分割线结束-->
+
+    <!-- 内容区域底部开始-->
+  <!-- 第一轮-->
+    <div class="content_bottom">
+        <div class="bottom first">
+            <a href="#"><img src="15.jpg" alt="" class="show"/></a>
+            <div class="bot_tom">
+                <a href="#"><img src="16.jpg" alt="" class="show"/></a>
+                <span>¥498</span>
+            </div>
+        </div>
+        <div class="bottom">
+            <a href="#"><img src="shoubiao.jpg" alt="" class="show"/></a>
+            <div class="bot_tom">
+                <a href="#"><img src="shoubiao1.jpg" alt="" class="show"/></a>
+                <span>¥1635</span>
+            </div>
+        </div>
+        <div class="bottom">
+            <a href="#"><img src="male.jpg" alt="" class="show"/></a>
+
+            <div class="bot_tom">
+                <a href="#"><img src="male1.jpg" alt=""/></a>
+                <span>¥299</span>
+            </div>
+        </div>
+        <div class="bottom">
+            <a href="#"> <img src="female.jpg" alt="" class="show"/></a>
+            <div class="bot_tom">
+                <a href="#"> <img src="female1.jpg" alt=""/></a>
+                <span>¥299</span>
+            </div>
+        </div>
+        <div class="bottom">
+            <a href="#"><img src="10.jpg" alt="" class="show"/></a>
+            <div class="bot_tom">
+                <a href="#"><img src="11.jpg" alt=""/></a>
+                <span>¥498</span>
+            </div>
+        </div>
+    </div>
+    <!-- 第一轮结束-->
+
+    <!-- 第二轮-->
+    <div class="content_bottom">
+        <div class="bottom first">
+            <a href="#"><img src="12.jpg" alt="" class="show"/></a>
+            <div class="bot_tom">
+                <a href="#"><img src="9.jpg" alt=""/></a>
+                <span>¥58</span>
+            </div>
+        </div>
+        <div class="bottom">
+            <a href="#"><img src="13.jpg" alt="" class="show"/></a>
+            <div class="bot_tom">
+                <a href="#"><img src="14.jpg" alt=""/></a>
+                <span>¥498</span>
+            </div>
+        </div>
+        <div class="bottom">
+            <a href="#"><img src="8.jpg" alt="" class="show"/></a>
+            <div class="bot_tom">
+                <a href="#"> <img src="9.jpg" alt=""/></a>
+                <span>¥498</span>
+            </div>
+        </div>
+        <div class="bottom">
+            <a href="#"><img src="17.jpg" alt="" class="show"/></a>
+            <div class="bot_tom">
+                <a href="#"> <img src="18.jpg" alt=""/></a>
+                <span>¥98</span>
+            </div>
+        </div>
+        <div class="bottom">
+            <a href="#"><img src="19.jpg" alt="" class="show"/></a>
+            <div class="bot_tom">
+                <a href="#"> <img src="9.jpg" alt=""/></a>
+                <span>¥998</span>
+            </div>
+        </div>
+    </div>
+    <!-- 第二轮结束-->
+
+    <!-- 第三轮开始-->
+    <div class="content_bottom">
+        <div class="bottom first">
+            <a href="#"> <img src="20.jpg" alt="" class="show"/></a>
+            <div class="bot_tom">
+                <a href="#"><img src="21.jpg" alt=""/></a>
+                <span>¥548</span>
+            </div>
+        </div>
+        <div class="bottom">
+            <a href="#"><img src="22.jpg" alt="" class="show"/></a>
+            <div class="bot_tom">
+                <a href="#"><img src="14.jpg" alt=""/></a>
+                <span>¥668</span>
+            </div>
+        </div>
+        <div class="bottom">
+            <a href="#"><img src="23.jpg" alt="" class="show"/></a>
+            <div class="bot_tom">
+                <a href="#"><img src="24.jpg" alt=""/></a>
+                <span>¥128</span>
+            </div>
+        </div>
+        <div class="bottom">
+            <a href="#"><img src="25.jpg" alt="" class="show"/></a>
+            <div class="bot_tom">
+                <!--<img src="9.jpg" alt=""/>-->
+                <span>¥2100</span>
+            </div>
+        </div>
+        <div class="bottom">
+            <a href="#"><img src="26.jpg" alt="" class="show"/></a>
+            <div class="bot_tom">
+                <a href="#"><img src="27.jpg" alt=""/></a>
+                <span>¥498</span>
+            </div>
+        </div>
+    </div>
+    <!-- 第三轮结束-->
+
+    <!-- 第四轮开始-->
+    <div class="content_bottom">
+        <div class="bottom first">
+            <a href="#"><img src="28.jpg" alt="" class="show"/></a>
+            <div class="bot_tom">
+                <a href="#"><img src="29.jpg" alt="" class="show"/></a>
+                <span>¥1098</span>
+            </div>
+        </div>
+        <div class="bottom">
+            <a href="#"><img src="30.jpg" alt="" class="show"/></a>
+            <div class="bot_tom">
+                <a href="#"><img src="31.jpg" alt="" class="show"/></a>
+                <span>¥1635</span>
+            </div>
+        </div>
+        <div class="bottom">
+            <a href="#"><img src="32.jpg" alt="" class="show"/></a>
+
+            <div class="bot_tom">
+                <a href="#"><img src="33.jpg" alt=""/></a>
+                <span>¥299</span>
+            </div>
+        </div>
+        <div class="bottom">
+            <a href="#"> <img src="34.jpg" alt="" class="show"/></a>
+            <div class="bot_tom">
+                <a href="#"> <img src="35.jpg" alt=""/></a>
+                <span>¥299</span>
+            </div>
+        </div>
+        <div class="bottom">
+            <a href="#"><img src="36.jpg" alt="" class="show"/></a>
+            <div class="bot_tom">
+                <a href="#"><img src="37.jpg" alt=""/></a>
+                <span>¥79</span>
+            </div>
+        </div>
+    </div>
+    <!--第四轮结束-->
+
+    <!-- 第五轮开始-->
+    <div class="content_bottom">
+        <div class="bottom first">
+            <a href="#"><img src="15.jpg" alt="" class="show"/></a>
+            <div class="bot_tom">
+                <a href="#"><img src="16.jpg" alt="" class="show"/></a>
+                <span>¥498</span>
+            </div>
+        </div>
+        <div class="bottom">
+            <a href="#"><img src="shoubiao.jpg" alt="" class="show"/></a>
+            <div class="bot_tom">
+                <a href="#"><img src="shoubiao1.jpg" alt="" class="show"/></a>
+                <span>¥1635</span>
+            </div>
+        </div>
+        <div class="bottom">
+            <a href="#"><img src="male.jpg" alt="" class="show"/></a>
+
+            <div class="bot_tom">
+                <a href="#"><img src="male1.jpg" alt=""/></a>
+                <span>¥299</span>
+            </div>
+        </div>
+        <div class="bottom">
+            <a href="#"> <img src="female.jpg" alt="" class="show"/></a>
+            <div class="bot_tom">
+                <a href="#"> <img src="female1.jpg" alt=""/></a>
+                <span>¥299</span>
+            </div>
+        </div>
+        <div class="bottom">
+            <a href="#"><img src="10.jpg" alt="" class="show"/></a>
+            <div class="bot_tom">
+                <a href="#"><img src="11.jpg" alt=""/></a>
+                <span>¥498</span>
+            </div>
+        </div>
+    </div>
+    <!-- 第五轮结束-->
+    <!-- 内容区域底部结束-->
+
+        </div>
+<!--右边栏-->
+
+<div class="sidebr" id="sidebar">
+    <ul>
+        <li></li>
+        <li></li>
+        <li><a href="javascript:;"><img src="tamll-master/imgs/特权.png" alt=""/></a></li>
+        <li class="second"><a href="javascript:;"><img src="tamll-master/imgs/yougouwuche.png" alt=""/></a></li>
+        <li><a href="javascript:;"><img src="tamll-master/imgs/钱.png" alt=""/></a></li>
+        <li><a href="javascript:;"><img src="tamll-master/imgs/心.png" alt=""/></a></li>
+        <li><a href="javascript:;"><img src="tamll-master/imgs/星.png" alt=""/></a></li>
+        <li><a href="javascript:;"><img src="tamll-master/imgs/表.png" alt=""/></a></li>
+        <li><a href="javascript:;"><img src="tamll-master/imgs/充.png" alt=""/></a></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li><a href="javascript:;"><img src="tamll-master/imgs/反馈.png" alt=""/></a></li>
+        <li><a href="javascript:;"><img src="tamll-master/imgs/大礼包.png" alt=""/></a></li>
+        <li><a href="#"><img src="tamll-master/imgs/回顶部.png" alt=""/></a></li>
+    </ul>
+</div>
+<!--隐藏的盒子-->
+<div id="box">
+    <div class="hide">
+        <span class="wenzi">我的特权</span>
+        <span class="sjx"></span>
+    </div>
+    <div></div>
+    <div class="hide1">
+        <span class="wenzi">我的特权</span>
+        <span class="sjx"></span>
+    </div>
+    <div class="hide2">
+        <span class="wenzi">我的特权</span>
+        <span class="sjx"></span>
+    </div>
+    <div class="hide3">
+        <span class="wenzi">我的特权</span>
+        <span class="sjx"></span>
+    </div>
+    <div class="hide4">
+        <span class="wenzi">我的特权</span>
+        <span class="sjx"></span>
+    </div>
+    <div class="hide5">
+        <span class="wenzi">我的特权</span>
+        <span class="sjx"></span>
+    </div>
+    <div class="hide6">
+        <span class="wenzi">我的特权</span>
+        <span class="sjx"></span>
+    </div>
+    <div class="hide7">
+        <span class="wenzi">我的特权</span>
+        <span class="sjx"></span>
+    </div>
+    <div class="hide8">
+        <span class="wenzi">我的特权</span>
+        <span class="sjx"></span>
+    </div>
+
+</div>
+
+
+</body>
+</html>

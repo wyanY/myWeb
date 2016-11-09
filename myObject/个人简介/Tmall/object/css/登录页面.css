@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: "Microsoft YaHei", 'Hiragino Sans GB', '\5b8b\4f53', sans-serif;;
+}
+.logpage{
+    width: 1583px;
+    height: 688px;
+}
+.logpage .logo{
+    width: 1190px;
+    height: 44px;
+    padding: 22px 0;
+    margin: 0 auto;
+}
+.logpage .content{
+    position: relative;
+    width: 1583px;
+    height: 600px;
+    background-color: #6a0fe1;
+}
+.logpage .content .item{
+    width: 1190px;
+    height: 600px;
+    margin: 0 auto;
+}
+.logpage .content .item .log-img{
+    float: left;
+    width: 630px;
+    height: 400px;
+    margin: 60px;
+}
+.logpage .content .item .login-box{
+    background:#ffffff url(../images/shaoma.png) no-repeat right top;
+    float: left;
+    width: 350px;
+    height: 404px;
+    /*background-color: #fff;*/
+    margin: 90px 0 0 40px;
+}
+.item .login-box .pwd{
+    width: 298px;
+    height: 257px;
+    margin: 50px 30px;
+}
+.item .login-box .pwd div{
+    width: 258px;
+    height: 42px;
+    padding-left: 40px;
+    border: 1px solid #999999;
+    margin-top: 20px;
+}
+.item .login-box .pwd .name{
+    background: url(../images/uname.png) no-repeat -1px -1px;
+}
+.item .login-box .pwd .mima{
+    background: url(../images/pwd.png) no-repeat -1px -1px;
+}
+.item .login-box .pwd input{
+    width: 254px;
+    height: 38px;
+    font-size: 16px;
+}
+.item .login-box .pwd .denglv{
+    padding: 0;
+    width: 298px;
+    border: 0;
+}
+.item .login-box .pwd .denglv input{
+    width: 300px;
+    height: 44px;
+    background-color: #c40000;
+    border: 0;
+    border-radius: 5px;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 20px;
+}
+.item .login-box .pwd p{
+    width: 298px;
+    height: 18px;
+    margin-top: 25px;
+    font-size: 12px;
+}
+.item .login-box .pwd a{
+    display: block;
+    float: right;
+    color: #6c6c6c;
+    margin-right: 10px;
+    text-decoration: none;
+}

@@ -1,0 +1,25 @@
+.f_l{
+    float: left;
+}
+.f_r{
+    float: right;
+}
+.clearfix{
+    *zoom: 1;
+}
+.clearfix:after{
+    content: " ";
+    display: block;
+    clear: both;
+    width: 0;
+    height: 0;
+    visibility: hidden;
+
+}
+.cl_both {
+    clear: both;
+}
+.w{
+    width: 1230px;
+    margin: 0 auto;
+}

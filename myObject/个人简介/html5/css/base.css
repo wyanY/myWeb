@@ -1,0 +1,20 @@
+html,body,div,span,h1,h2,h3,h4,h5,h6,article,header,
+footer,article,section,form,textarea,li,ul,a{
+    margin:0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    border: none;
+    font-style: normal;
+    color: #a1a1a1;
+    border: 0;
+    font: 400 62.5% arial, "Microsoft YaHei", simsun, sans-serif;
+    /*font-size: 100%;*/
+    vertical-align: baseline;
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}

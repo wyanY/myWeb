@@ -1,0 +1,24 @@
+body,header,nav,main,article,section,footer,aside,div,h1,h2,h3,h4,h5,h6,p,ul,form,input,select,ol,span,img{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+}
+li{
+    list-style: none;
+}
+img{
+    border: none;
+    vertical-align: middle;
+}
+input{
+    outline: none;
+    border: none;
+}
+body{
+    font-size: 12px;
+    font-family: 'Microsoft Yahei',simsun, sans-serif ;
+}
+

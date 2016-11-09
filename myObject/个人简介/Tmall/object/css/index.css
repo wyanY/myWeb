@@ -1,0 +1,527 @@
+@charset "UTF-8";
+body,div,span,ul,li,a,img,h1,h2,h3,h4,h5,h6,ol{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    text-decoration: none;
+    list-style-type: none;
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+/* 中间内容样式设置开始 */
+.contents{
+    width: 100%;
+    background-color: #f5f5f5;
+}
+/* 版心样式设置开始 */
+.ws{
+    width: 1230px;
+    padding-right: 30px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+/* 版心样式设置结束 */
+
+/* 长条图片样式设置开始 */
+.e{
+    width: 1230px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+.e a img{
+    width: 1620px;
+    height: 90px;
+    margin-left: -165px;
+}
+/* 长条图片样式设置结束 */
+
+/* 亲子时光样式设置开始 */
+.kids,.outdoors,.home,.grocery,.electronics,.fashion{
+    width: 100%;
+    height: 470px;
+    margin-top: 30px;
+}
+/* 亲子时光大标题样式设置开始 */
+i{
+    font-style: normal;
+    width: 5px;
+    height: 20px;
+    display: block;
+    /*background-color: #f7a945;*/
+}
+.floor_name{
+    display: inline-block;
+    vertical-align: top;
+    font-size: 18px;
+    line-height: 18px;
+    height: 18px;
+    color: #000;
+    margin-left: 10px;
+}
+.fool_sub_name{
+    display: inline-block;
+    vertical-align: top;
+    line-height: 24px;
+    height: 18px;
+    color: #000;
+    font-size: 14px;
+    margin-left: 10px;
+}
+/* 亲子时光大标题样式设置结束 */
+
+
+/* 亲子时光内容样式设置开始 */
+.lineBody{
+    position: relative;
+    margin-top: 10px;
+    width: 100%;
+    height: 440px;
+}
+
+/* 亲子时光标题菜单样式设置开始 */
+.lineBody .r_type{
+    position: absolute;
+    top: -30px;
+    right: 0;
+    width: 800px;
+    text-align: right;
+}
+.lineBody .r_type a{
+    height: 20px;
+    display: inline-block;
+    line-height: 20px;
+    font-size: 14px;
+    color: #000;
+    margin:5px 10px;
+    border-bottom: 1px solid #f5f5f5;
+}
+.lineBody .r_type a:hover{
+    border-color: black;
+}
+/* 亲子时光标题菜单样式设置结束 */
+
+.kids i{
+    background-color: #f7a945;
+}
+.kids .title_con{
+    background-color: #f7a945;
+}
+.kids .sub_title{
+    color: #f7a945;
+}
+
+/* 左边样式设置开始 */
+.lineBody .left-slide{
+    position: relative;
+    width: 246px;
+    height: 440px;
+}
+.lineBody .left-slide img{
+    vertical-align: middle;
+    width: 246px;
+    height: 330px;
+}
+.lineBody .left-slide .current{
+    vertical-align: middle;
+    width: 246px;
+    height: 330px;
+    opacity: 0.7;
+}
+.lineBody .left-slide .title_ctn {
+    position:absolute;
+    bottom: 110px;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    background-color: rgba(255, 255, 255, 0.8);
+    overflow: hidden;
+    color: #000;
+}
+.lineBody .left-slide .title_ctn .slide_item{
+    line-height: 30px;
+    text-align: center;
+    font-size: 14px;
+}
+.lineBody .left-slide .title_con{
+    width: 100%;
+    height: 110px;
+}
+.lineBody .left-slide .title_con .title{
+    color: #fff;
+    font-size: 22px;
+    padding-top: 20px;
+    overflow: hidden;
+    font-weight: 700;
+    text-align: center;
+}
+.lineBody .left-slide .title_con .sub_title{
+    padding-top: 5px;
+    font-size: 18px;
+    text-align: center;
+    color: #fff;
+}
+
+.lineBody .left-slide .title_con .decoration{
+    width: 100%;
+    height: 30px;
+}
+/* 左边样式设置结束 */
+
+/* 中间样式设置开始 */
+.lineBody .center{
+    width: 735px;
+    height: 440px;
+}
+.lineBody .center .pht{
+    float: left;
+    border-width: 0 1px 1px 0;
+    border-style: solid;
+    border-color: #f5f5f5;
+    width: 244px;
+    height: 220px;
+    position: relative;
+    background-color: #fff;
+}
+.lineBody .center .pht .title{
+    font-size: 18px;
+    padding: 20px 0 5px 25px;
+    color: #000;
+}
+.lineBody .center .pht .sub_title{
+    font-size: 14px;
+    padding-left: 25px;
+    /*color: #f7a945;*/
+}
+.lineBody .center .pht img{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 154px;
+    height: 154px;
+}
+/* 中间样式设置结束 */
+
+/* 右边样式设置开始 */
+.lineBody .right_slide{
+    width: 248px;
+    height: 440px;
+}
+.lineBody .right_slide .right_row{
+    border-width: 0 1px 1px 0;
+    border-style: solid;
+    border-color: #f5f5f5;
+    width: 100%;
+    height: 146px;
+    position: relative;
+    background-color: #fff;
+}
+.lineBody .right_slide .right_row .title{
+    font-size: 18px;
+    position: absolute;
+    top: 20px;
+    left: 25px;
+    color: #000;
+    z-index:2;
+}
+.lineBody .right_slide .right_row .sub_title{
+    position: absolute;
+    top: 50px;
+    left: 25px;
+    font-size: 14px;
+    z-index: 2;
+    /*color: #f7a945;*/
+}
+.lineBody .right_slide .right_row img{
+    z-index: 1;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100px;
+    height: 100px;
+}
+/* 右边样式设置结束 */
+/*亲子时光内容样式设置结束*/
+/* 亲子时光样式设置结束 */
+
+
+/* 户外出行样式设置开始 */
+.outdoors i{
+    background-color: #19c8a9;
+}
+.outdoors .title_con{
+    background-color: #19c8a9;
+}
+.outdoors .sub_title{
+    color: #19c8a9;
+}
+/* 户外出行样式设置结束 */
+
+/* 打造爱巢样式设置开始 */
+.home i{
+    background-color: #f15453;
+}
+.home .title_con{
+    background-color: #f15453;
+}
+.home .sub_title{
+    color: #f15453;
+}
+.home .lineBody .right_slide .right_row{
+    height: 109px;
+    position: relative;
+    background-color: #fff;
+}
+.home .lineBody .right_slide .right_row img{
+    width: 109px;
+    height: 109px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+/* 打造爱巢样式设置结束 */
+
+/* 居家生活样式设置开始 */
+.grocery i{
+    background-color: #64c333;
+}
+.grocery .title_con{
+    background-color: #64c333;
+}
+.grocery .sub_title{
+    color: #64c333;
+}
+/* 居家生活样式设置结束 */
+
+/* 潮电酷玩样式设置开始 */
+/* 颜色设置开始 */
+.electronics i{
+    background-color: #0aa6e8;
+}
+.electronics .title_con{
+    background-color: #0aa6e8;
+}
+.electronics .sub_title{
+    color: #0aa6e8;
+}
+/* 颜色设置结束 */
+/* 图片样式设置开始 */
+/* 中间内容样式设置开始 */
+.electronics .lineBody .center #first{
+    width: 489px;
+    height: 220px;
+}
+.electronics .lineBody .center #first .title{
+    font-size: 24px;
+    padding: 45px 0 40px 45px;
+    color: #000;
+}
+.electronics .lineBody .center #first .sub_title{
+    font-size: 16px;
+    padding-left: 45px;
+    /*color: #f7a945;*/
+}
+.electronics .lineBody .center #first img{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 195px;
+    height: 195px;
+}
+/* 中间样式设置结束 */
+/* 右边样式设置开始 */
+.electronics .lineBody .right_slide .right_row{
+    height: 220px;
+}
+.electronics .lineBody .right_slide .right_row img{
+    z-index: 1;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 154px;
+    height: 154px;
+}
+/* 右边样式设置结束 */
+/* 图片样式设置结束 */
+/* 潮电酷玩样式设置结束 */
+
+/* 美丽人生样式设置开始 */
+.fashion i{
+    background-color: #ea5f8d;
+}
+.fashion .title_con{
+    background-color: #ea5f8d;
+}
+.fashion .sub_title{
+    color: #ea5f8d;
+}
+/* 美丽人生样式设置结束 */
+
+/* 猜你喜欢标题样式设置开始 */
+.love{
+    width: 1230px;
+    height: 2040px;
+    margin-top: 30px;
+}
+/* 标题样式设置开始 */
+.love .caption{
+    position: relative;
+    text-align: center;
+    width: 100%;
+    height: 43px;
+}
+.love .caption .line {
+    display: inline-block;
+    width: 190px;
+    height: 1px;
+    line-height: 43px;
+    background-color: #979797;
+}
+.love .caption .text_ctn{
+    position: absolute;
+    top: 0;
+    left: 555px;
+    background-color: #f5f5f5;
+    width: 120px;
+    height: 43px;
+}
+.love .caption .text_ctn span{
+    display: inline-block;
+    color: #666;
+    font-weight: 100;
+    font-size: 18px;
+}
+/* 标题样式设置结束 */
+
+/* 内容样式设置开始 */
+.love .pics .love_line{
+    width: 100%;
+    height: 333px;
+}
+.love .pics .love_line .love_item{
+    background-color: #fff;
+    float: left;
+    width: 235px;
+    margin: 0 12px 7px 0;
+}
+.love .pics .love_line .last{
+    margin: 0 0 7px 0;
+}
+.love .pics .love_line .love_item .item_pic{
+    display: block;
+    width: 235px;
+    height: 230px;
+    overflow: hidden;
+}
+.love .pics .item_pic img{
+    width: 235px;
+    height: 235px;
+}
+.love .pics .love_item .item_info{
+    display: block;
+    padding: 14px 12px 8px;
+    text-align: left;
+}
+.love .pics .love_item .item_info .item_desc{
+    color: #666;
+    font-size: 13px;
+    line-height: 18px;
+}
+.love .pics .love_item .item_info .item_detail{
+    color: red;
+    font-size: 16px;
+    line-height: 32px;
+}
+/* 内容样式设置结束 */
+/* 猜你喜欢样式设置结束 */
+
+/* end 结束样式设置开始 */
+.tm{
+    position: relative;
+    width: 1230px;
+    height: 82px;
+}
+.tm .tm_end{
+    width: 130px;
+    height: 72px;
+    background: url("../images/end.PNG")no-repeat;
+    position: absolute;
+    top: 0;
+    left: 550px;
+}
+/* end 结束样式设置结束 */
+
+/* 侧边栏样式设置开始 */
+.fp-lift{
+    width: 100%;
+}
+.fp-lift .mui-lift{
+    display: none;
+    position: fixed;
+    bottom: 50px;
+    left: 50%;
+    margin-left: -672px;
+    width: 36px;
+    height: 333px;
+}
+/*.fp-lift .mui-lift .sn-nav{
+    width: 36px;
+    height: 333px;
+}*/
+.fp-lift .mui-lift .sn-nav .mui-lift-nav.nav-header{
+    background-color: #dd2727;
+    line-height: 28px;
+}
+.fp-lift .mui-lift .sn-nav .mui-lift-nav,.nav-name{
+    width: 28px;
+    height: 28px;
+    background-color: inherit;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 1px;
+    font-size: 12px;
+    padding: 4px;
+}
+.fp-lift .mui-lift .sn-nav div a{
+    display: block;
+    width: 36px;
+    height: 36px;
+    background-color: #626262;
+}
+.fp-lift .mui-lift .sn-nav .nav-back{
+    line-height: 13px;
+    background-color: #acacac;
+}
+.fp-lift .mui-lift .sn-nav .nav-name i{
+    background: url("../images/xiaojianjiao.PNG") no-repeat;
+    font-style: normal;
+    width: 32px;
+    height: 14px;
+    display: block;
+}
+.kid:hover{
+    background-color:#f7a945;
+}
+.outdoor:hover{
+    background-color: #19c8a9;
+}
+.homes:hover{
+    background-color: #f15453;
+}
+.grocerys:hover{
+    background-color:#64c333 ;
+}
+.electronic:hover{
+    background-color: #0aa6e8;
+}
+.fashions:hover{
+    background-color: #ea5f8d;
+}
+.pin:hover,.loves:hover{
+    background-color:black;
+}
+/* 侧边栏样式设置结束 */
